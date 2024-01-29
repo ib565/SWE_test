@@ -63,4 +63,14 @@ class Company{
         Arrays.sort(employees, Comparator.comparingInt(Employee::getSalary));
         return employees;
     }
+
+    public Employee[] sortEmployeesByAge() {
+        Arrays.sort(employees, Comparator.comparingInt(Employee::getAge));
+        return employees;
+    }
+
+    public Employee[] sortEmployeesByName() {
+        Arrays.sort(employees, Comparator.comparing(Employee::getName));
+        return employees;
+    }
 }
